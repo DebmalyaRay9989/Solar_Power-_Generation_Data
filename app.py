@@ -29,7 +29,7 @@ from prophet.plot import plot_cross_validation_metric
 import sweetviz as sv 
 import codecs
 
-def st_display_sweetviz(report_html,width=1000,height=500):
+def st_display_sweetviz(report_html,width=1200,height=800):
 	report_file = codecs.open(report_html,'r')
 	page = report_file.read()
 	components.html(page,width=width,height=height,scrolling=True)
@@ -95,7 +95,7 @@ def main():
 
 	"""Semi Automated ML App with Streamlit """
 
-	activities = ["EDA","Plots", "Plots2", "Sweetviz"]
+	activities = ["EDA","Plots", "Plots2", "Sweetviz", "Sweetviz2"]
 
 	choice = st.sidebar.selectbox("Select Activities",activities)
 
@@ -194,8 +194,13 @@ def main():
 		
 		
 	elif choice == "Sweetviz":
-		st.subheader("Automated EDA with Sweetviz")
+		st.subheader("Automated EDA with Sweetviz - Generation Data")
 		st_display_sweetviz("generation_data.html")
+		
+	elif choice == "Sweetviz2":
+		st.subheader("Automated EDA with Sweetviz - Weather Sensor Data")
+		st_display_sweetviz("weather_sensor_data.html")
+		
 
 
 if __name__ == '__main__' :
