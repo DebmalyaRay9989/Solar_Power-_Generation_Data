@@ -62,7 +62,7 @@ def add_bg_from_url():
              background-image: url("https://cdn.pixabay.com/photo/2016/02/15/11/38/background-1201003_960_720.jpg");
              background-attachment: fixed;
              background-size: cover;
-			 color: Green;
+			 color: Red;
 			 font-family:sans-serif;
          }}
 
@@ -129,7 +129,7 @@ def main():
 			# Customizable Plot
 			all_columns_names = df3.columns.tolist()
 			type_of_plot = st.selectbox("Select Type of Plot",["area","line","kde"])
-			selected_columns_names = st.multiselect("Select Columns To Plot",all_columns_names)
+			selected_columns_names = st.multiselect("Select Columns To Plot(1 column)",all_columns_names)
 			if st.button("Generate Plot"):
 				st.success("Generating Customizable Plot of {} for {}".format(type_of_plot,selected_columns_names))
 				if type_of_plot == 'area':
