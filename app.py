@@ -29,7 +29,7 @@ import streamlit_theme as stt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_title="Solar Energy Dashboard", page_icon=":bar_chart:", layout="wide")
 
-stt.set_theme({'primary': '#f63366'})
+stt.set_theme({'primary': '#1b3388'})
 
 st.title("Classification Web App - Sensor Data")
 st.subheader("Creator : Debmalya Ray")
