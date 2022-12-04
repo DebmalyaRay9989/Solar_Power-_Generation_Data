@@ -29,7 +29,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_title="Solar Energy Dashboard", page_icon=":bar_chart:", layout="wide")
 
 
-st.title("Classification Web App - Sensor Data")
+st.title("Classification Web App - Solar Power Generation")
 st.subheader("Creator : Debmalya Ray")
 
 st.sidebar.title("Categorical Classification")
