@@ -24,6 +24,15 @@ from prophet.diagnostics import performance_metrics
 from prophet.diagnostics import cross_validation
 from prophet.plot import plot_cross_validation_metric
 
+# Custome Component Fxn
+import sweetviz as sv 
+import codecs
+
+def st_display_sweetviz(report_html,width=1000,height=500):
+	report_file = codecs.open(report_html,'r')
+	page = report_file.read()
+	components.html(page,width=width,height=height,scrolling=True)
+
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_title="Solar Energy Dashboard", page_icon=":bar_chart:", layout="wide")
@@ -181,6 +190,11 @@ def main():
 		))
 
 		st.pyplot()
+		
+		
+	elif choice == "Sweetviz":
+		st.subheader("Automated EDA with Sweetviz")
+		st_display_sweetviz("generation_data.html")
 
 
 if __name__ == '__main__' :
