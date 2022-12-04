@@ -19,6 +19,7 @@ from sklearn import preprocessing
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 import altair as alt
+import streamlit.components.v1 as components
 from prophet import Prophet
 from prophet.diagnostics import performance_metrics
 from prophet.diagnostics import cross_validation
