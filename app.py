@@ -94,7 +94,7 @@ def main():
 
 	"""Semi Automated ML App with Streamlit """
 
-	activities = ["EDA","Plots", "Plots2"]
+	activities = ["EDA","Plots", "Plots2", "Sweetviz"]
 
 	choice = st.sidebar.selectbox("Select Activities",activities)
 
