@@ -6,3 +6,4 @@ seaborn==0.11.1
 protobuf<=3.20.*
 plotly==5.11.0
 prophet==1.1.1
+streamlit-theme==0.58.0
